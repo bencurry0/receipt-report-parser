@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5326e94c-c2f2-47e8-bf7e-5caa149f528b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/CurryFirm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/receipt-report-parser.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__test__/constants.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__test__/getBudgetLine.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__test__/getCellValue.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__test__/getCellValueAssured.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/getCellValue.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2pOlPsnKUdDs32VkmZbeBbwinwb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "18.19.0",
+    "javascript.nodejs.core.library.typings.version": "18.19.0",
+    "last_opened_file_path": "/home/bencurry0/IdeaProjects/receipt-report-parser/src/main/app.js",
+    "nodejs.jest.jest_package": "/home/bencurry0/IdeaProjects/receipt-report-parser/node_modules/jest",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "copyright"
+  }
+}]]></component>
+  <component name="RunManager" selected="Jest.getCellValue.should return batch total as a float">
+    <configuration name="getCellValue.returns empty string if receipt date is not in date format" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/__test__/getCellValue.test.js" />
+      <test-names>
+        <test-name value="getCellValue" />
+        <test-name value="returns empty string if receipt date is not in date format" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="getCellValue.returns empty string if report total label is missing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/__test__/getCellValue.test.js" />
+      <test-names>
+        <test-name value="getCellValue" />
+        <test-name value="returns empty string if report total label is missing" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="getCellValue.should return batch total as a float" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/__test__/getCellValue.test.js" />
+      <test-names>
+        <test-name value="getCellValue" />
+        <test-name value="should return batch total as a float" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="getCellValue.should return empty string if batch total label is missing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/__test__/getCellValue.test.js" />
+      <test-names>
+        <test-name value="getCellValue" />
+        <test-name value="should return empty string if batch total label is missing" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="getCellValue.should return the check number as a string" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/__test__/getCellValue.test.js" />
+      <test-names>
+        <test-name value="getCellValue" />
+        <test-name value="should return the check number as a string" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="RunApp" type="NodeJSConfigurationType" path-to-js-file="src/main/app.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Jest.getCellValue.returns empty string if receipt date is not in date format" />
+      <item itemvalue="Jest.getCellValue.returns empty string if report total label is missing" />
+      <item itemvalue="Jest.getCellValue.should return batch total as a float" />
+      <item itemvalue="Jest.getCellValue.should return empty string if batch total label is missing" />
+      <item itemvalue="Jest.getCellValue.should return the check number as a string" />
+      <item itemvalue="Node.js.RunApp" />
+      <item itemvalue="npm.test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.getCellValue.should return batch total as a float" />
+        <item itemvalue="Jest.getCellValue.should return empty string if batch total label is missing" />
+        <item itemvalue="Jest.getCellValue.returns empty string if report total label is missing" />
+        <item itemvalue="Jest.getCellValue.should return the check number as a string" />
+        <item itemvalue="Jest.getCellValue.returns empty string if receipt date is not in date format" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5326e94c-c2f2-47e8-bf7e-5caa149f528b" name="Changes" comment="" />
+      <created>1732644987084</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732644987084</updated>
+      <workItem from="1732644990339" duration="1333000" />
+      <workItem from="1732655828720" duration="1374000" />
+      <workItem from="1732817329112" duration="17432000" />
+      <workItem from="1733148580687" duration="3207000" />
+      <workItem from="1733151972245" duration="72650000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/app.js</url>
+          <line>115</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/getCellValue.js</url>
+          <line>90</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
