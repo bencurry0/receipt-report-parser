@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5326e94c-c2f2-47e8-bf7e-5caa149f528b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copyright/CurryFirm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/receipt-report-parser.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__test__/constants.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__test__/getBudgetLine.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__test__/getCellValue.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__test__/getCellValueAssured.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/getCellValue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,20 +29,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "18.19.0",
-    "javascript.nodejs.core.library.typings.version": "18.19.0",
-    "last_opened_file_path": "/home/bencurry0/IdeaProjects/receipt-report-parser/src/main/app.js",
-    "nodejs.jest.jest_package": "/home/bencurry0/IdeaProjects/receipt-report-parser/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "copyright"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.19.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.19.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/bencurry0/IdeaProjects/receipt-report-parser/src/main/app.js&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/home/bencurry0/IdeaProjects/receipt-report-parser/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Jest.getCellValue.should return batch total as a float">
     <configuration name="getCellValue.returns empty string if receipt date is not in date format" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
@@ -175,6 +159,8 @@
       <workItem from="1732817329112" duration="17432000" />
       <workItem from="1733148580687" duration="3207000" />
       <workItem from="1733151972245" duration="72650000" />
+      <workItem from="1733539684526" duration="895000" />
+      <workItem from="1733541134099" duration="724000" />
     </task>
     <servers />
   </component>
@@ -187,14 +173,7 @@
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/src/main/app.js</url>
           <line>115</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/getCellValue.js</url>
-          <line>90</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
