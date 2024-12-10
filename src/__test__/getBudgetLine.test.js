@@ -3,40 +3,22 @@
  */
 
 import { getBudgetLine } from '../main/getCellValue.js';
-import { Row } from 'exceljs';
 
-// Mock the Row class, really only the getCell function.
-jest.mock('exceljs', () => {
-    const originalModule = jest.requireActual('exceljs');
-    return {
-        ...originalModule,
-        Row: jest.fn(() => ({
-            getCell: jest.fn()
-        }))
-    };
-});
+const DESC_ROW_WITH_BLI = ',,,113,,,,,,,,General,,,,,PancakeBreakfast,,,,bli=28 blah blah,,,,,,,35.00'.split(',');
+const DESC_ROW_WITH_BLI_NONE = ',,,113,,,,,,,,General,,,,,PancakeBreakfast,,,,bli=none blah blah,,,,,,,35.00'.split(',');
+const DESC_NO_BLI = ',,,113,,,,,,,,General,,,,,PancakeBreakfast,,,,blah blah,,,,,,,35.00'.split(',');
 
 describe('getBudgetLine', () => {
-    let mockRow;
-
-    beforeEach(() => {
-
-        // Mock instance of Row.
-        mockRow = new Row();
-    });
 
     it('returns budget line number from description with bli=number', () => {
-        mockRow.getCell.mockReturnValue({ value: 'bli=145 Cash payment for pancakes', });
-        expect(getBudgetLine(mockRow)).toBe(145);
+        expect(getBudgetLine(DESC_ROW_WITH_BLI)).toBe(28);
     });
 
     it('returns \'none\' from description with bli=none', () => {
-        mockRow.getCell.mockReturnValue({ value: 'bli=none Baby bottle donation', });
-        expect(getBudgetLine(mockRow)).toBe('none');
+        expect(getBudgetLine(DESC_ROW_WITH_BLI_NONE)).toBe('none');
     });
 
     it('returns empty string from description without bli', () => {
-        mockRow.getCell.mockReturnValue({ value: 'Baby bottle donation', });
-        expect(getBudgetLine(mockRow)).toBe('');
+        expect(getBudgetLine(DESC_NO_BLI)).toBe('');
     });
 });

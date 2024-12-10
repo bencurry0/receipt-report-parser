@@ -9,16 +9,16 @@ describe('Constants file', () => {
         const sourcePositions = CONSTANTS.SOURCE_POSITIONS;
 
         // Verify each value in SOURCE_POSITIONS
-        expect(sourcePositions.BATCH_NUM).toBe(3);
-        expect(sourcePositions.CHECK_NUM).toBe(4);
-        expect(sourcePositions.BATCH_DATE).toBe(12);
-        expect(sourcePositions.PAYOR).toBe(12);
-        expect(sourcePositions.ACCOUNT).toBe(12);
-        expect(sourcePositions.EVENT).toBe(17);
-        expect(sourcePositions.BATCH_TOTAL_LABEL).toBe(19);
-        expect(sourcePositions.DESCRIPTION).toBe(21);
-        expect(sourcePositions.AMOUNT).toBe(28);
-        expect(sourcePositions.BATCH_TOTAL).toBe(25);
+        expect(sourcePositions.BATCH_NUM).toBe(2);
+        expect(sourcePositions.CHECK_NUM).toBe(3);
+        expect(sourcePositions.BATCH_DATE).toBe(11);
+        expect(sourcePositions.PAYOR).toBe(11);
+        expect(sourcePositions.ACCOUNT).toBe(11);
+        expect(sourcePositions.EVENT).toBe(16);
+        expect(sourcePositions.BATCH_TOTAL_LABEL).toBe(18);
+        expect(sourcePositions.DESCRIPTION).toBe(20);
+        expect(sourcePositions.AMOUNT).toBe(27);
+        expect(sourcePositions.BATCH_TOTAL).toBe(24);
     });
 
     it('should be immutable (using Object.freeze)', () => {

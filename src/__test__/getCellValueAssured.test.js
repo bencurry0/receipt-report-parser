@@ -5,31 +5,22 @@
 import { getCellValueAssured } from '../main/getCellValue.js';
 import CONSTANTS from '../main/constants.js';
 
+const BATCH_ROW = ',,Batch: 677,,,,,,,,,Date Processed: 11-16-2024,,,,,,,,,,,,,,,,'.split(',');
+const CHECK_NUM_ROW = ',,,1695,,,,,,,,Community Activities: JioSupport,,,,,,,,,Donation for the Bean Bunch,,,,,,,40.00'.split(',');
+
 describe('getCellValueAssured', () => {
-    let row;
-
-    beforeEach(() => {
-
-        // Mock row and getCell.
-        row = {
-            getCell: jest.fn(),
-        };
-    });
 
     it('returns parsed batch number from the cell value if present', () => {
-        row.getCell.mockReturnValueOnce({ value: 'Batch: 12345' });
-        const batchNumber = getCellValueAssured(row, CONSTANTS.CELL_NAMES.BATCH_NUM, 10);
-        expect(batchNumber).toBe("12345");
+        const batchNumber = getCellValueAssured(BATCH_ROW, CONSTANTS.CELL_NAMES.BATCH_NUM, 10);
+        expect(batchNumber).toBe("677");
     });
 
     it('returns amount from the cell value if present', () => {
-        row.getCell.mockReturnValueOnce({ value: 12345.67 });
-        const amount = getCellValueAssured(row, CONSTANTS.CELL_NAMES.AMOUNT, 10);
-        expect(amount).toBe(12345.67);
+        const amount = getCellValueAssured(CHECK_NUM_ROW, CONSTANTS.CELL_NAMES.AMOUNT, 10);
+        expect(amount).toBe(40.00);
     });
 
     it('throws error if the cell value is not present', () => {
-        row.getCell.mockReturnValueOnce({ value: '' });
-        expect(() => getCellValueAssured(row, CONSTANTS.CELL_NAMES.RECEIPT_NUM, 10)).toThrow('ReceiptNum not found, row 10');
+        expect(() => getCellValueAssured(BATCH_ROW, CONSTANTS.CELL_NAMES.RECEIPT_NUM, 10)).toThrow('ReceiptNum not found, row 10');
     });
 });

@@ -14,7 +14,7 @@
   "description": "Parse KofC Financial Secretary Receipt Report Detail",
   "dependencies": {
     "csv-writer": "^1.6.0",
-    "exceljs": "^4.4.0"
+    "papaparse": "^5.4.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.0",

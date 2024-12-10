@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5326e94c-c2f2-47e8-bf7e-5caa149f528b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/receiptReportParser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/constants.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/constants.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__test__/getBudgetLine.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/getBudgetLine.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__test__/getCellValue.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/getCellValue.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__test__/getCellValueAssured.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/getCellValueAssured.test.js" afterDir="false" />
@@ -77,35 +79,35 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="getCellValue.returns batch date as string" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="getCellValueAssured.returns amount from the cell value if present" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/__test__/getCellValue.test.js" />
+      <test-file value="$PROJECT_DIR$/src/__test__/getCellValueAssured.test.js" />
       <test-names>
-        <test-name value="getCellValue" />
-        <test-name value="returns batch date as string" />
+        <test-name value="getCellValueAssured" />
+        <test-name value="returns amount from the cell value if present" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="getCellValue.returns empty string if batch date is not in date format" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="getCellValueAssured.throws error if the cell value is not present" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/__test__/getCellValue.test.js" />
+      <test-file value="$PROJECT_DIR$/src/__test__/getCellValueAssured.test.js" />
       <test-names>
-        <test-name value="getCellValue" />
-        <test-name value="returns empty string if batch date is not in date format" />
+        <test-name value="getCellValueAssured" />
+        <test-name value="throws error if the cell value is not present" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="getCellValue.returns receipt date as string" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="getCellValue.returns report total as a float" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -115,7 +117,7 @@
       <test-file value="$PROJECT_DIR$/src/__test__/getCellValue.test.js" />
       <test-names>
         <test-name value="getCellValue" />
-        <test-name value="returns receipt date as string" />
+        <test-name value="returns report total as a float" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -134,20 +136,20 @@
     </configuration>
     <list>
       <item itemvalue="Jest.getBudgetLine" />
-      <item itemvalue="Jest.getCellValue.returns batch date as string" />
-      <item itemvalue="Jest.getCellValue.returns empty string if batch date is not in date format" />
-      <item itemvalue="Jest.getCellValue.returns receipt date as string" />
+      <item itemvalue="Jest.getCellValue.returns report total as a float" />
+      <item itemvalue="Jest.getCellValueAssured.returns amount from the cell value if present" />
+      <item itemvalue="Jest.getCellValueAssured.throws error if the cell value is not present" />
       <item itemvalue="Jest.getCellValue" />
       <item itemvalue="Node.js.RunApp" />
       <item itemvalue="npm.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.getBudgetLine" />
-        <item itemvalue="Jest.getCellValue.returns empty string if batch date is not in date format" />
-        <item itemvalue="Jest.getCellValue.returns batch date as string" />
         <item itemvalue="Jest.getCellValue" />
-        <item itemvalue="Jest.getCellValue.returns receipt date as string" />
+        <item itemvalue="Jest.getCellValue.returns report total as a float" />
+        <item itemvalue="Jest.getBudgetLine" />
+        <item itemvalue="Jest.getCellValueAssured.throws error if the cell value is not present" />
+        <item itemvalue="Jest.getCellValueAssured.returns amount from the cell value if present" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +169,7 @@
       <workItem from="1733539684526" duration="895000" />
       <workItem from="1733541134099" duration="2344000" />
       <workItem from="1733576509205" duration="19000" />
-      <workItem from="1733576763998" duration="34030000" />
+      <workItem from="1733576763998" duration="49978000" />
     </task>
     <task id="LOCAL-00001" summary="Commit workspace.xml changes">
       <created>1733543830884</created>
@@ -176,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733543830884</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Many refinements, though still not working.  Last commit before switching over to using a .csv file as input.">
+      <created>1733776757965</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733776757965</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,34 +193,49 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit workspace.xml changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit workspace.xml changes" />
+    <MESSAGE value="Many refinements, though still not working.  Last commit before switching over to using a .csv file as input." />
+    <option name="LAST_COMMIT_MESSAGE" value="Many refinements, though still not working.  Last commit before switching over to using a .csv file as input." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/src/main/getCellValue.js</url>
-          <line>79</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/getCellValue.js</url>
-          <line>133</line>
+          <line>132</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
+        <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/src/main/app.js</url>
-          <line>119</line>
+          <line>52</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/app.js</url>
-          <line>92</line>
+        <line-breakpoint type="javascript">
+          <condition expression="batchNum === '654'" language="JavaScript" />
+          <url>file://$PROJECT_DIR$/src/main/receiptReportParser.js</url>
+          <line>42</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="34" />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <condition expression="outputRow.batchNum === '654'" language="JavaScript" />
+          <url>file://$PROJECT_DIR$/src/main/receiptReportParser.js</url>
+          <line>71</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/receiptReportParser.js</url>
+          <line>27</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/getCellValue.js</url>
+          <line>115</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
