@@ -14,7 +14,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Define the file paths and read the input as a single string.
-const outputFilePath = path.join(__dirname, '../../data', 'output.csv');
+const outputFilePath = path.join(__dirname, '../../data', 'receipts.csv');
 const inputFilePath = path.join(__dirname, '../../data', 'ReceiptDetailByDateReport.xls - receiptDetail.csv');
 const inputFileContent = fs.readFileSync(inputFilePath, 'utf8');
 
