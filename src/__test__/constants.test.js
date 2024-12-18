@@ -2,11 +2,11 @@
  * Copyright (c) 2024.   curryfirm.com
  */
 
-import CONSTANTS from '../main/constants.js';
+import Constants from '../main/constants.js';
 
 describe('Constants file', () => {
     it('should have correct values for SOURCE_POSITIONS', () => {
-        const sourcePositions = CONSTANTS.SOURCE_POSITIONS;
+        const sourcePositions = Constants.SOURCE_POSITIONS;
 
         // Verify each value in SOURCE_POSITIONS
         expect(sourcePositions.BATCH_NUM).toBe(2);
@@ -23,7 +23,7 @@ describe('Constants file', () => {
 
     it('should be immutable (using Object.freeze)', () => {
         // eslint-disable-next-line no-const-assign
-        const sourcePositions = CONSTANTS.SOURCE_POSITIONS;
+        const sourcePositions = Constants.SOURCE_POSITIONS;
 
         // Try changing a constant value (it should not succeed since the object is frozen)
         expect(() => {
@@ -31,6 +31,6 @@ describe('Constants file', () => {
         }).toThrow(); // This should throw an error in strict mode
 
         // Optionally, test other properties of Object.freeze
-        expect(Object.isFrozen(CONSTANTS.SOURCE_POSITIONS)).toBe(true); // Check if the object is frozen
+        expect(Object.isFrozen(Constants.SOURCE_POSITIONS)).toBe(true); // Check if the object is frozen
     });
 });

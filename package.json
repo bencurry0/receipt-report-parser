@@ -4,7 +4,11 @@
   "type": "module",
   "main": "main/app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "node build.mjs",
+    "deploy": "node deploy.mjs",
+    "clean": "rm -rf dist && mkdir dist",
+    "start": "node dist/app.js"
   },
   "keywords": [
     "kofc"

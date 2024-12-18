@@ -43,7 +43,7 @@ const batchTotalLabelRegex = new RegExp('^Batch (\\d+) Total:$');
 const budgetLineRegex = new RegExp('^bli=(\\d+|\\w+)\\b');
 const reportTotalLabelRegex = new RegExp('Grand Total of Report of Receipts:');
 
-const CONSTANTS = Object.freeze({
+const Constants = Object.freeze({
     CELL_NAMES: cellNames,
     SOURCE_POSITIONS: positions,
     DATE_REGEX: dateRegex,
@@ -52,6 +52,10 @@ const CONSTANTS = Object.freeze({
     BATCH_TOTAL_LABEL_REGEXP: batchTotalLabelRegex,
     BUDGET_LINE_REGEX: budgetLineRegex,
     REPORT_TOTAL_LABEL_REGEXP: reportTotalLabelRegex,
+    INPUT_DIR: '/home/bencurry0/Kofc6250/KofC6250@gmail.com/Finance/FY2025/Supreme',
+    OUTPUT_DIR: '/home/bencurry0/Kofc6250/KofC6250@gmail.com/Finance/FY2025/Supreme',
+    INPUT_FILE: 'ReceiptDetailByDateReport.xls - receiptDetail.csv',
+    OUTPUT_FILE: 'receipts.csv',
 });
 
-export default CONSTANTS;
+export default Constants;

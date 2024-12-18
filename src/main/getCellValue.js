@@ -2,7 +2,7 @@
  * Copyright (c) 2024.   curryfirm.com
  */
 
-import CONSTANTS from "./constants.js";
+import Constants from "./constants.js";
 
 const DATE_REGEX = new RegExp('^\\d\\d-\\d\\d-\\d\\d\\d\\d$');
 
@@ -21,63 +21,63 @@ export const getCellValue = (row, cellName) => {
 
         // If possible, parse the batch number from a cell value like "Batch: 642",
         // returning the string "642", or return an empty string otherwise.
-        case CONSTANTS.CELL_NAMES.BATCH_NUM:
+        case Constants.CELL_NAMES.BATCH_NUM:
             batch = '';
-            cell = row[CONSTANTS.SOURCE_POSITIONS.BATCH_NUM];
+            cell = row[Constants.SOURCE_POSITIONS.BATCH_NUM];
             cellValue = (cell ? cell.trim() : '');
-            match = cellValue.match(CONSTANTS.BATCH_NUM_REGEX);
+            match = cellValue.match(Constants.BATCH_NUM_REGEX);
             if (match) {
                 batch = parseInt(match[1], 10);
             }
             return batch.toString();
 
         // Verify date format and return date as string, or return empty string.
-        case (CONSTANTS.CELL_NAMES.BATCH_DATE):
-            cell = row[CONSTANTS.SOURCE_POSITIONS.BATCH_DATE];
+        case (Constants.CELL_NAMES.BATCH_DATE):
+            cell = row[Constants.SOURCE_POSITIONS.BATCH_DATE];
             cellValue = (cell ? cell.trim() : '');
-            match = cellValue.match(CONSTANTS.BATCH_DATE_REGEX);
+            match = cellValue.match(Constants.BATCH_DATE_REGEX);
             return match ? match[1] : '';
 
         // Validate numeric nature of receipt num and return it as a string,
         // or return the empty string.
-        case (CONSTANTS.CELL_NAMES.RECEIPT_NUM):
-            cell = row[CONSTANTS.SOURCE_POSITIONS.RECEIPT_NUM];
+        case (Constants.CELL_NAMES.RECEIPT_NUM):
+            cell = row[Constants.SOURCE_POSITIONS.RECEIPT_NUM];
             cellValue = (cell ? cell.trim() : '');
             cellValue = parseInt(cellValue, 10);
             return cellValue ? cellValue.toString() : '';
 
         // Validate xx-xx-xxxx format of receipt date and return it as a string,
         // or return the empty string.
-        case (CONSTANTS.CELL_NAMES.RECEIPT_DATE):
-            cell = row[CONSTANTS.SOURCE_POSITIONS.RECEIPT_DATE];
+        case (Constants.CELL_NAMES.RECEIPT_DATE):
+            cell = row[Constants.SOURCE_POSITIONS.RECEIPT_DATE];
             cellValue = (cell ? cell.trim() : '');
             if (!cellValue.match(DATE_REGEX)) {
                 cellValue = '';
             }
             return cellValue;
 
-        case (CONSTANTS.CELL_NAMES.PAYOR):
-            cell = row[CONSTANTS.SOURCE_POSITIONS.PAYOR];
+        case (Constants.CELL_NAMES.PAYOR):
+            cell = row[Constants.SOURCE_POSITIONS.PAYOR];
             return (cell ? cell.trim() : '');
 
-        case (CONSTANTS.CELL_NAMES.CHECK_NUM):
-            cell = row[CONSTANTS.SOURCE_POSITIONS.CHECK_NUM];
+        case (Constants.CELL_NAMES.CHECK_NUM):
+            cell = row[Constants.SOURCE_POSITIONS.CHECK_NUM];
             return (cell ? cell.trim() : '');
 
-        case (CONSTANTS.CELL_NAMES.ACCOUNT):
-            cell = row[CONSTANTS.SOURCE_POSITIONS.ACCOUNT];
+        case (Constants.CELL_NAMES.ACCOUNT):
+            cell = row[Constants.SOURCE_POSITIONS.ACCOUNT];
             return (cell ? cell.trim() : '');
 
-        case (CONSTANTS.CELL_NAMES.EVENT):
-            cell = row[CONSTANTS.SOURCE_POSITIONS.EVENT];
+        case (Constants.CELL_NAMES.EVENT):
+            cell = row[Constants.SOURCE_POSITIONS.EVENT];
             return (cell ? cell.trim() : '');
 
-        case (CONSTANTS.CELL_NAMES.DESCRIPTION):
-            cell = row[CONSTANTS.SOURCE_POSITIONS.DESCRIPTION];
+        case (Constants.CELL_NAMES.DESCRIPTION):
+            cell = row[Constants.SOURCE_POSITIONS.DESCRIPTION];
             return (cell ? cell.trim() : '');
 
-        case (CONSTANTS.CELL_NAMES.AMOUNT):
-            cell = row[CONSTANTS.SOURCE_POSITIONS.AMOUNT];
+        case (Constants.CELL_NAMES.AMOUNT):
+            cell = row[Constants.SOURCE_POSITIONS.AMOUNT];
             cellValue = (cell ? cell.trim() : '');
             const amount = parseFloat(cellValue.replace(/,/g, ''));
             return Number.isNaN(amount) ? '' : amount;
@@ -85,17 +85,17 @@ export const getCellValue = (row, cellName) => {
         // If the given row has the "Batch xxx Total:" label and if the cell value
         // in the BATCH_TOTAL position is numeric, then return it.  Otherwise,
         // return an empty string.
-        case (CONSTANTS.CELL_NAMES.BATCH_TOTAL):
+        case (Constants.CELL_NAMES.BATCH_TOTAL):
 
             // Verify presence of Batch Total label.
-            cell = row[CONSTANTS.SOURCE_POSITIONS.BATCH_TOTAL_LABEL];
+            cell = row[Constants.SOURCE_POSITIONS.BATCH_TOTAL_LABEL];
             cellValue = (cell ? cell.trim() : '');
-            if (cellValue.match(CONSTANTS.BATCH_TOTAL_LABEL_REGEXP) === null) {
+            if (cellValue.match(Constants.BATCH_TOTAL_LABEL_REGEXP) === null) {
                 return '';
             }
 
             // Get the batch total.
-            cell = row[CONSTANTS.SOURCE_POSITIONS.BATCH_TOTAL];
+            cell = row[Constants.SOURCE_POSITIONS.BATCH_TOTAL];
             cellValue = (cell ? cell.trim() : '');
             const batchTotal = parseFloat(cellValue.replace(/,/g, ''));
             return Number.isNaN(batchTotal) ? '' : batchTotal;
@@ -103,17 +103,17 @@ export const getCellValue = (row, cellName) => {
         // If the given row has the "Grand Total of Report of Receipts:" label
         // and if the cell value in the REPORT_TOTAL position is numeric, then
         // return it.  Otherwise, return an empty string.
-        case (CONSTANTS.CELL_NAMES.REPORT_TOTAL):
+        case (Constants.CELL_NAMES.REPORT_TOTAL):
 
             // Verify presence of Batch Total label.
-            cell = row[CONSTANTS.SOURCE_POSITIONS.REPORT_TOTAL_LABEL];
+            cell = row[Constants.SOURCE_POSITIONS.REPORT_TOTAL_LABEL];
             cellValue = (cell ? cell.trim() : '');
-            if (cellValue.match(CONSTANTS.REPORT_TOTAL_LABEL_REGEXP) === null) {
+            if (cellValue.match(Constants.REPORT_TOTAL_LABEL_REGEXP) === null) {
                 return '';
             }
 
             // Get the batch total if possible.
-            cell = row[CONSTANTS.SOURCE_POSITIONS.REPORT_TOTAL];
+            cell = row[Constants.SOURCE_POSITIONS.REPORT_TOTAL];
             cellValue = (cell ? cell.trim() : '');
             const reportTotal = parseFloat(cellValue.replace(/,/g, ''));
             return Number.isNaN(reportTotal) ? '' : reportTotal;
@@ -136,8 +136,8 @@ export const getCellValueAssured = (row, cellName, rowNumber) => {
 }
 
 export const getBudgetLine = (row) => {
-    const desc = getCellValue(row, CONSTANTS.CELL_NAMES.DESCRIPTION);
-    const match = desc.match(CONSTANTS.BUDGET_LINE_REGEX);
+    const desc = getCellValue(row, Constants.CELL_NAMES.DESCRIPTION);
+    const match = desc.match(Constants.BUDGET_LINE_REGEX);
     let budgetLine = '';
     if (match) {
         budgetLine = parseInt(match[1], 10);
@@ -149,21 +149,21 @@ export const getBudgetLine = (row) => {
 };
 
 export const isReportTotalRow = row => {
-    return getCellValue(row, CONSTANTS.CELL_NAMES.REPORT_TOTAL) && true;
+    return getCellValue(row, Constants.CELL_NAMES.REPORT_TOTAL) && true;
 };
 
 export const isBatchTotalRow = row => {
-    return getCellValue(row, CONSTANTS.CELL_NAMES.BATCH_TOTAL) && true;
+    return getCellValue(row, Constants.CELL_NAMES.BATCH_TOTAL) && true;
 };
 
 export const isBatchStartRow = row => {
-    return getCellValue(row, CONSTANTS.CELL_NAMES.BATCH_NUM) && true;
+    return getCellValue(row, Constants.CELL_NAMES.BATCH_NUM) && true;
 };
 
 export const isReceiptStartRow = row => {
-    return getCellValue(row, CONSTANTS.CELL_NAMES.RECEIPT_NUM) && !getCellValue(row, CONSTANTS.CELL_NAMES.AMOUNT) && true;
+    return getCellValue(row, Constants.CELL_NAMES.RECEIPT_NUM) && !getCellValue(row, Constants.CELL_NAMES.AMOUNT) && true;
 }
 
 export const isReceiptContinuationRow = row => {
-    return getCellValue(row, CONSTANTS.CELL_NAMES.AMOUNT) && true;
+    return getCellValue(row, Constants.CELL_NAMES.AMOUNT) && true;
 }

@@ -3,7 +3,7 @@
  */
 
 import * as myRow from "./getCellValue.js";
-import CONSTANTS from './constants.js';
+import Constants from './constants.js';
 
 const TRANSFER_IN = 'internal transfer in';
 const outputRow = {};
@@ -23,7 +23,7 @@ export const processRow = (row, rowNumber, outputRows) => {
     if (myRow.isReportTotalRow(row)) {
 
         // Get report total from input row; compute it from banked data; compare.
-        const reportTotalRead = myRow.getCellValueAssured(row, CONSTANTS.CELL_NAMES.REPORT_TOTAL, rowNumber);
+        const reportTotalRead = myRow.getCellValueAssured(row, Constants.CELL_NAMES.REPORT_TOTAL, rowNumber);
         const reportTotalComputed = outputRows.reduce((total, receiptRow) => total + receiptRow.amount, 0);
         if (!areEqualWithinTolerance(reportTotalRead, reportTotalComputed)) {
             throw new Error('Input report grand total does not match total of receipts scanned.');
@@ -36,7 +36,7 @@ export const processRow = (row, rowNumber, outputRows) => {
         clearRow(outputRow);
 
         // Get batch total from input row; compute it from banked data; compare.
-        const batchTotalRead = myRow.getCellValueAssured(row, CONSTANTS.CELL_NAMES.BATCH_TOTAL, rowNumber);
+        const batchTotalRead = myRow.getCellValueAssured(row, Constants.CELL_NAMES.BATCH_TOTAL, rowNumber);
         const batchNum = outputRows[outputRows.length - 1].batchNum;
         const batchTotalComputed = outputRows.filter(receiptRow => receiptRow.batchNum === batchNum)
             .reduce((total, receiptRow) => total + receiptRow.amount, 0.0);
@@ -50,26 +50,26 @@ export const processRow = (row, rowNumber, outputRows) => {
         // Done with currently accumulating receipt.
         clearRow(outputRow);
 
-        outputRow.batchNum = myRow.getCellValueAssured(row, CONSTANTS.CELL_NAMES.BATCH_NUM, rowNumber);
-        outputRow.batchDate = myRow.getCellValueAssured(row, CONSTANTS.CELL_NAMES.BATCH_DATE, rowNumber);
+        outputRow.batchNum = myRow.getCellValueAssured(row, Constants.CELL_NAMES.BATCH_NUM, rowNumber);
+        outputRow.batchDate = myRow.getCellValueAssured(row, Constants.CELL_NAMES.BATCH_DATE, rowNumber);
         return;
     }
     if (myRow.isReceiptStartRow(row)) {
 
         // This could be the start of the second or subsequent receipt in the current batch;
         // batchNum and batchDate are already in outputRow. Glean the info from the present input row.
-        outputRow.receiptNum = myRow.getCellValueAssured(row, CONSTANTS.CELL_NAMES.RECEIPT_NUM, rowNumber);
-        outputRow.receiptDate = myRow.getCellValueAssured(row, CONSTANTS.CELL_NAMES.RECEIPT_DATE, rowNumber);
-        outputRow.payor = myRow.getCellValueAssured(row, CONSTANTS.CELL_NAMES.PAYOR, rowNumber);
+        outputRow.receiptNum = myRow.getCellValueAssured(row, Constants.CELL_NAMES.RECEIPT_NUM, rowNumber);
+        outputRow.receiptDate = myRow.getCellValueAssured(row, Constants.CELL_NAMES.RECEIPT_DATE, rowNumber);
+        outputRow.payor = myRow.getCellValueAssured(row, Constants.CELL_NAMES.PAYOR, rowNumber);
         outputRow.transfer = (outputRow.payor.toString().trim().toLowerCase() === TRANSFER_IN);
         return;
     }
     if (myRow.isReceiptContinuationRow(row)) {
-        outputRow.account = myRow.getCellValueAssured(row, CONSTANTS.CELL_NAMES.ACCOUNT, rowNumber);
-        outputRow.event = myRow.getCellValue(row, CONSTANTS.CELL_NAMES.EVENT);    // Optionally present in input.
-        outputRow.description = myRow.getCellValue(row, CONSTANTS.CELL_NAMES.DESCRIPTION);    // Optionally present in input.
+        outputRow.account = myRow.getCellValueAssured(row, Constants.CELL_NAMES.ACCOUNT, rowNumber);
+        outputRow.event = myRow.getCellValue(row, Constants.CELL_NAMES.EVENT);    // Optionally present in input.
+        outputRow.description = myRow.getCellValue(row, Constants.CELL_NAMES.DESCRIPTION);    // Optionally present in input.
         outputRow.budgetLine = myRow.getBudgetLine(row);
-        outputRow.amount = myRow.getCellValueAssured(row, CONSTANTS.CELL_NAMES.AMOUNT, rowNumber);
+        outputRow.amount = myRow.getCellValueAssured(row, Constants.CELL_NAMES.AMOUNT, rowNumber);
 
         // Assume a split receipt's parts are consecutive in the input.  If the last output row bears the
         // same receipt number as the one currently being accumulated, mark both as split.
@@ -87,7 +87,7 @@ export const processRow = (row, rowNumber, outputRows) => {
             // or, more likely, it is the continuation af an unsplit receipt.
             // In either case, this is where we capture the check number (or "cash")
             // from the input row.  Its presence is optional in the input.
-            outputRow.checkNum = myRow.getCellValue(row, CONSTANTS.CELL_NAMES.CHECK_NUM);
+            outputRow.checkNum = myRow.getCellValue(row, Constants.CELL_NAMES.CHECK_NUM);
         }
 
         // Data are complete for this receipt or split of receipt.  Bank a copy of outputRow.

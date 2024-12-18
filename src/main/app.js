@@ -2,20 +2,17 @@
  * Copyright (c) 2024.   curryfirm.com
  */
 
-import { processRow } from './receiptReportParser.js'
+import { processRow } from './receiptReportParser.js';
+import Constants from './constants.js';
 
 import fs from 'fs';
 import Papa from 'papaparse';
 
 import { createObjectCsvWriter } from 'csv-writer';
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Define the file paths and read the input as a single string.
-const outputFilePath = path.join(__dirname, '../../data', 'receipts.csv');
-const inputFilePath = path.join(__dirname, '../../data', 'ReceiptDetailByDateReport.xls - receiptDetail.csv');
+const outputFilePath = Constants.OUTPUT_DIR + '/' + Constants.OUTPUT_FILE;
+const inputFilePath = Constants.INPUT_DIR + '/' + Constants.INPUT_FILE;
 const inputFileContent = fs.readFileSync(inputFilePath, 'utf8');
 
 // Array in which to accumulate the output rows appropriate for filters and pivot tables.
