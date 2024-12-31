@@ -2,13 +2,12 @@
  * Copyright (c) 2024.   curryfirm.com
  */
 
-import { processRow } from './receiptReportParser.js';
-import Constants from './constants.js';
-
 import fs from 'fs';
 import Papa from 'papaparse';
-
 import { createObjectCsvWriter } from 'csv-writer';
+import Constants from './constants.js';
+import { processRow } from './receiptReportParser.js';
+
 
 // Define the file paths and read the input as a single string.
 const outputFilePath = Constants.OUTPUT_DIR + '/' + Constants.OUTPUT_FILE;
@@ -17,7 +16,6 @@ const inputFileContent = fs.readFileSync(inputFilePath, 'utf8');
 
 // Array in which to accumulate the output rows appropriate for filters and pivot tables.
 const outputRows = [];
-
 
 /*
  * Iteratively read the rows of the input Receipt Report worksheet, scanning for the expected
@@ -47,7 +45,6 @@ async function readAndExtractData() {
     });
     return outputRows;
 }
-// }
 
 // Function to write the extracted data to a CSV file
 async function writeToCSV(data) {
@@ -79,9 +76,9 @@ async function writeToCSV(data) {
 // Main function to execute the process
 async function main() {
     try {
-        console.log('Reading and extracting data from Excel file...');
+        console.log(`Reading and extracting data from "${inputFilePath}"...`);
         const outputRows = await readAndExtractData();
-        console.log('Writing extracted data to CSV file...');
+        console.log(`Writing extracted data to "${outputFilePath}"...`);
         await writeToCSV(outputRows);
         console.log('Application finished successfully');
     } catch (error) {

@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f09feeaa-e559-476e-a00e-6071d0d4d6af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/copyright/curryfirm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deploy.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/receipt-report-parser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/voucher-parser.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__test__/constants.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/constants.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__test__/getCellValue.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/getCellValue.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__test__/getCellValueAssured.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/getCellValueAssured.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/getCellValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/getCellValue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/receiptReportParser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/receiptReportParser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +41,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.19.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.19.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/bencurry0/IdeaProjects/voucher-parser&quot;,
     &quot;nodejs.jest.jest_package&quot;: &quot;/home/bencurry0/IdeaProjects/receipt-report-parser/node_modules/jest&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;
@@ -65,6 +60,19 @@
         <test-name value="Constants file" />
       </test-names>
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="voucher-parser" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="voucher-parser" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Receipts" type="NodeJSConfigurationType" path-to-js-file="src/main/app.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -144,6 +152,8 @@
       <workItem from="1734273305421" duration="6350000" />
       <workItem from="1734553379855" duration="1934000" />
       <workItem from="1734556031063" duration="500000" />
+      <workItem from="1734556726513" duration="1323000" />
+      <workItem from="1735605105994" duration="4421000" />
     </task>
     <task id="LOCAL-00001" summary="Change output file to receipts.csv">
       <created>1733933149231</created>
@@ -152,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733933149232</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Works directly with mounted Google Drive files.">
+      <created>1734556832864</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734556832864</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +177,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change output file to receipts.csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change output file to receipts.csv" />
+    <MESSAGE value="Works directly with mounted Google Drive files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Works directly with mounted Google Drive files." />
   </component>
 </project>

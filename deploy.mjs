@@ -14,6 +14,7 @@ const targetDir = '~/deployments/receipt-report-parser';
 
 (async () => {
     try {
+        await execAsync(`mkdir -p ${targetDir}`);
         await execAsync(`cp ${packageJsonDir}/package.json ${targetDir}`);
         await execAsync(`cp -R ${distDir} ${targetDir}`);
         console.log(`Deployed successfully to ${targetDir}`);

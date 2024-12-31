@@ -17,7 +17,7 @@ const cellNames = Object.freeze({
     REPORT_TOTAL: 'ReportTotal',
 });
 
-// Listed in order of encoutering in input, left-to-right, top-to-bottom
+// Listed in order of encountering in input, left-to-right, top-to-bottom
 const positions = Object.freeze({
     BATCH_NUM: 2,
     BATCH_DATE: 11,
