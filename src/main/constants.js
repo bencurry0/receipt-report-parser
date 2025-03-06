@@ -19,20 +19,20 @@ const cellNames = Object.freeze({
 
 // Listed in order of encountering in input, left-to-right, top-to-bottom
 const positions = Object.freeze({
-    BATCH_NUM: 2,
-    BATCH_DATE: 11,
-    RECEIPT_NUM: 3,
-    RECEIPT_DATE: 7,
-    PAYOR: 11,
-    CHECK_NUM: 3,
-    ACCOUNT: 11,
-    EVENT: 16,
-    DESCRIPTION: 20,
-    AMOUNT: 27,
-    BATCH_TOTAL_LABEL: 18,
-    BATCH_TOTAL: 24,
-    REPORT_TOTAL_LABEL: 17,
-    REPORT_TOTAL: 23,
+    BATCH_NUM: 1,
+    BATCH_DATE: 10,
+    RECEIPT_NUM: 2,
+    RECEIPT_DATE: 6,
+    PAYOR: 10,
+    CHECK_NUM: 2,
+    ACCOUNT: 10,
+    EVENT: 15,
+    DESCRIPTION: 19,
+    AMOUNT: 26,
+    BATCH_TOTAL_LABEL: 17,
+    BATCH_TOTAL: 23,
+    REPORT_TOTAL_LABEL: 16,
+    REPORT_TOTAL: 22,
 });
 
 const datePattern = '((0\\d|1[012])-([012]\\d|3[01])-\\d{4})';

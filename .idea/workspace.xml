@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f09feeaa-e559-476e-a00e-6071d0d4d6af" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/receipt-report-parser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/voucher-parser.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/constants.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/constants.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/getBudgetLine.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/getBudgetLine.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/getCellValue.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/getCellValue.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__test__/getCellValueAssured.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/getCellValueAssured.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/constants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -41,7 +46,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.19.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.19.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/bencurry0/IdeaProjects/voucher-parser&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/bencurry0/IdeaProjects/receipt-report-parser&quot;,
     &quot;nodejs.jest.jest_package&quot;: &quot;/home/bencurry0/IdeaProjects/receipt-report-parser/node_modules/jest&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;
@@ -60,19 +65,6 @@
         <test-name value="Constants file" />
       </test-names>
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="voucher-parser" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="voucher-parser" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="Receipts" type="NodeJSConfigurationType" path-to-js-file="src/main/app.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -132,9 +124,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.clean" />
-        <item itemvalue="npm.test" />
         <item itemvalue="Jest.Constants file (1)" />
       </list>
     </recent_temporary>
@@ -153,7 +145,17 @@
       <workItem from="1734553379855" duration="1934000" />
       <workItem from="1734556031063" duration="500000" />
       <workItem from="1734556726513" duration="1323000" />
-      <workItem from="1735605105994" duration="4421000" />
+      <workItem from="1735605105994" duration="4483000" />
+      <workItem from="1736188541045" duration="98000" />
+      <workItem from="1736188667308" duration="138000" />
+      <workItem from="1736189038944" duration="73000" />
+      <workItem from="1736189164928" duration="100000" />
+      <workItem from="1741204938599" duration="59000" />
+      <workItem from="1741206400195" duration="76000" />
+      <workItem from="1741206508420" duration="1926000" />
+      <workItem from="1741271506138" duration="72000" />
+      <workItem from="1741271619499" duration="151000" />
+      <workItem from="1741272583629" duration="273000" />
     </task>
     <task id="LOCAL-00001" summary="Change output file to receipts.csv">
       <created>1733933149231</created>
@@ -169,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1734556832864</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="clean-up">
+      <created>1735655458827</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735655458827</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +187,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change output file to receipts.csv" />
     <MESSAGE value="Works directly with mounted Google Drive files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Works directly with mounted Google Drive files." />
+    <MESSAGE value="clean-up" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean-up" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/receiptReportParser.js</url>
+          <line>47</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main/getCellValue.js</url>
+          <line>19</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

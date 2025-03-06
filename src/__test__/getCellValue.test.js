@@ -5,19 +5,19 @@
 import { getCellValue } from '../main/getCellValue.js';
 import Constants from '../main/constants.js';
 
-const BATCH_ROW = ',,Batch: 677,,,,,,,,,Date Processed: 11-16-2024,,,,,,,,,,,,,,,,'.split(',');
-const NOT_BATCH_ROW = ',,Batch:,,,,,,,,,Date Processed: 11-16-2024,,,,,,,,,,,,,,,,'.split(',');
-const PADDED_BATCH_ROW = ',,   Batch: 98765  ,,,,,,,,,Date Processed: 11-16-2024,,,,,,,,,,,,,,,,'.split(',');
-const BAD_DATE_BATCH_ROW = ',,   Batch: 98765  ,,,,,,,,,Date Processed: 11162024,,,,,,,,,,,,,,,,'.split(',');
-const RECEIPT_START_ROW = ',,,8765,,,,11-16-2024,,,,Cash Participants ,,,,,,,,,,,,,,,,'.split(',');
-const PADDED_RECEIPT_START_ROW = ',,,   8765   ,,,,11-16-2024,,,,Cash Participants ,,,,,,,,,,,,,,,,'.split(',');
-const NON_NUMERIC_RECEIPT_ROW = ',,,foo,,,,11-16-2024,,,,Cash Participants ,,,,,,,,,,,,,,,,'.split(',');
-const BAD_RECEIPT_DATE = ',,,8765,,,,11162024,,,,Cash Participants ,,,,,,,,,,,,,,,,'.split(',');
-const CHECK_NUM_ROW = ',,,1695,,,,,,,,Community Activities: JioSupport,,,,,,,,,Donation for the Bean Bunch,,,,,,,40.00'.split(',');
-const BATCH_TOTAL_ROW = ',,,,,,,,,,,,,,,,,,Batch 627 Total:,,,,,,42.81,,,'.split(',');
-const BAD_BATCH_TOTAL_LABEL = ',,,,,,,,,,,,,,,,,,Not a batch label: 627 Total:,,,,,,42.81,,,'.split(',');
-const REPORT_TOTAL_ROW = ',,,,,,,,,,,,,,,,,Grand Total of Report of Receipts:,,,,,,26295.33,,,,'.split(',');
-const BADLY_LABELED_REPORT_TOTAL_ROW = ',,,,,,,,,,,,,,,,,Total of Report of Receipts:,,,,,,26295.33,,,,'.split(',');
+const BATCH_ROW = ',Batch: 677,,,,,,,,,Date Processed: 11-16-2024,,,,,,,,,,,,,,,,'.split(',');
+const NOT_BATCH_ROW = ',Batch:,,,,,,,,,Date Processed: 11-16-2024,,,,,,,,,,,,,,,,'.split(',');
+const PADDED_BATCH_ROW = ',   Batch: 98765  ,,,,,,,,,Date Processed: 11-16-2024,,,,,,,,,,,,,,,,'.split(',');
+const BAD_DATE_BATCH_ROW = ',   Batch: 98765  ,,,,,,,,,Date Processed: 11162024,,,,,,,,,,,,,,,,'.split(',');
+const RECEIPT_START_ROW = ',,8765,,,,11-16-2024,,,,Cash Participants ,,,,,,,,,,,,,,,,'.split(',');
+const PADDED_RECEIPT_START_ROW = ',,   8765   ,,,,11-16-2024,,,,Cash Participants ,,,,,,,,,,,,,,,,'.split(',');
+const NON_NUMERIC_RECEIPT_ROW = ',,foo,,,,11-16-2024,,,,Cash Participants ,,,,,,,,,,,,,,,,'.split(',');
+const BAD_RECEIPT_DATE = ',,8765,,,,11162024,,,,Cash Participants ,,,,,,,,,,,,,,,,'.split(',');
+const CHECK_NUM_ROW = ',,1695,,,,,,,,Community Activities: JioSupport,,,,,,,,,Donation for the Bean Bunch,,,,,,,40.00'.split(',');
+const BATCH_TOTAL_ROW = ',,,,,,,,,,,,,,,,,Batch 627 Total:,,,,,,42.81,,,'.split(',');
+const BAD_BATCH_TOTAL_LABEL = ',,,,,,,,,,,,,,,,,Not a batch label: 627 Total:,,,,,,42.81,,,'.split(',');
+const REPORT_TOTAL_ROW = ',,,,,,,,,,,,,,,,Grand Total of Report of Receipts:,,,,,,26295.33,,,,'.split(',');
+const BADLY_LABELED_REPORT_TOTAL_ROW = ',,,,,,,,,,,,,,,,Total of Report of Receipts:,,,,,,26295.33,,,,'.split(',');
 
 describe('getCellValue', () => {
 
