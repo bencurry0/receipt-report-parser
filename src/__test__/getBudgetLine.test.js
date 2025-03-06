@@ -4,9 +4,9 @@
 
 import { getBudgetLine } from '../main/getCellValue.js';
 
-const DESC_ROW_WITH_BLI = ',,,113,,,,,,,,General,,,,,PancakeBreakfast,,,,bli=28 blah blah,,,,,,,35.00'.split(',');
-const DESC_ROW_WITH_BLI_NONE = ',,,113,,,,,,,,General,,,,,PancakeBreakfast,,,,bli=none blah blah,,,,,,,35.00'.split(',');
-const DESC_NO_BLI = ',,,113,,,,,,,,General,,,,,PancakeBreakfast,,,,blah blah,,,,,,,35.00'.split(',');
+const DESC_ROW_WITH_BLI = ',,113,,,,,,,,General,,,,,PancakeBreakfast,,,,bli=28 blah blah,,,,,,,35.00'.split(',');
+const DESC_ROW_WITH_BLI_NONE = ',,113,,,,,,,,General,,,,,PancakeBreakfast,,,,bli=none blah blah,,,,,,,35.00'.split(',');
+const DESC_NO_BLI = ',,113,,,,,,,,General,,,,,PancakeBreakfast,,,,blah blah,,,,,,,35.00'.split(',');
 
 describe('getBudgetLine', () => {
 

@@ -5,8 +5,8 @@
 import { getCellValueAssured } from '../main/getCellValue.js';
 import Constants from '../main/constants.js';
 
-const BATCH_ROW = ',,Batch: 677,,,,,,,,,Date Processed: 11-16-2024,,,,,,,,,,,,,,,,'.split(',');
-const CHECK_NUM_ROW = ',,,1695,,,,,,,,Community Activities: JioSupport,,,,,,,,,Donation for the Bean Bunch,,,,,,,40.00'.split(',');
+const BATCH_ROW = ',Batch: 677,,,,,,,,,Date Processed: 11-16-2024,,,,,,,,,,,,,,,,'.split(',');
+const CHECK_NUM_ROW = ',,1695,,,,,,,,Community Activities: JioSupport,,,,,,,,,Donation for the Bean Bunch,,,,,,,40.00'.split(',');
 
 describe('getCellValueAssured', () => {
 
