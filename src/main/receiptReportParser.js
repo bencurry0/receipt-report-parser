@@ -5,7 +5,7 @@
 import * as myRow from "./getCellValue.js";
 import Constants from './constants.js';
 
-const TRANSFER_IN = 'internal transfer in';
+const TRANSFER = 'internal transfer';
 const outputRow = {};
 
 const areEqualWithinTolerance = (a, b, epsilon = 1e-5) => {
@@ -61,7 +61,7 @@ export const processRow = (row, rowNumber, outputRows) => {
         outputRow.receiptNum = myRow.getCellValueAssured(row, Constants.CELL_NAMES.RECEIPT_NUM, rowNumber);
         outputRow.receiptDate = myRow.getCellValueAssured(row, Constants.CELL_NAMES.RECEIPT_DATE, rowNumber);
         outputRow.payor = myRow.getCellValueAssured(row, Constants.CELL_NAMES.PAYOR, rowNumber);
-        outputRow.transfer = (outputRow.payor.toString().trim().toLowerCase() === TRANSFER_IN);
+        outputRow.transfer = outputRow.payor.toString().trim().toLowerCase().includes(TRANSFER);
         return;
     }
     if (myRow.isReceiptContinuationRow(row)) {
