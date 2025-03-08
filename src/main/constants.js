@@ -54,7 +54,7 @@ const Constants = Object.freeze({
     REPORT_TOTAL_LABEL_REGEXP: reportTotalLabelRegex,
     INPUT_DIR: '/home/bencurry0/Kofc6250/KofC6250@gmail.com/Finance/FY2025/Supreme',
     OUTPUT_DIR: '/home/bencurry0/Kofc6250/KofC6250@gmail.com/Finance/FY2025/Supreme',
-    INPUT_FILE: 'ReceiptDetailByDateReport.xls - receiptDetail.csv',
+    INPUT_FILE: 'ReceiptDetailByDateReport.csv',
     OUTPUT_FILE: 'receipts.csv',
 });
 
