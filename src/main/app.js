@@ -49,19 +49,21 @@ async function readAndExtractData() {
 // Function to write the extracted data to a CSV file
 async function writeToCSV(data) {
     const myHeader = [
-        {id: 'batchNum', title: 'BatchNumber'},
-        {id: 'batchDate', title: 'DateProcessed'},
-        {id: 'receiptNum', title: 'ReceiptNumber'},
-        {id: 'receiptDate', title: 'ReceiptDate'},
-        {id: 'payor', title: 'Payor'},
+        {id: 'vr', title: 'VR'},
+        {id: 'batchDate', title: 'ProcessDate'},
+        {id: 'receiptDate', title: 'VRDate'},
+        {id: 'batchNum', title: 'Batch'},
+        {id: 'receiptNum', title: 'VRNumber'},
+        {id: 'vDeductedFromR', title: 'VDeductedFromR'},
         {id: 'transfer', title: 'Transfer'},
-        {id: 'checkNum', title: 'CheckNumber'},
+        {id: 'amount', title: 'Amount'},
+        {id: 'payor', title: 'PayorPayee'},
         {id: 'account', title: 'Account'},
         {id: 'event', title: 'Event'},
-        {id: 'budgetLine', title: 'BudgetLine'},
         {id: 'description', title: 'Description'},
-        {id: 'amount', title: 'Amount'},
+        {id: 'budgetLine', title: 'BudgetLine'},
         {id: 'split', title: 'Split'},
+        {id: 'checkNum', title: 'CheckNumber'},
     ];
     const csvWriter = createObjectCsvWriter({
         path: outputFilePath,

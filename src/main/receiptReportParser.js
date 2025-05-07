@@ -50,6 +50,11 @@ export const processRow = (row, rowNumber, outputRows) => {
         // Done with currently accumulating receipt.
         clearRow(outputRow);
 
+        // Set invariant attributes.
+        outputRow.vr = 'R';
+        outputRow.vDeductedFromR = '';
+
+        // Get batch-specific data.
         outputRow.batchNum = myRow.getCellValueAssured(row, Constants.CELL_NAMES.BATCH_NUM, rowNumber);
         outputRow.batchDate = myRow.getCellValueAssured(row, Constants.CELL_NAMES.BATCH_DATE, rowNumber);
         return;
