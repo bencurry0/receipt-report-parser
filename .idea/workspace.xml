@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f09feeaa-e559-476e-a00e-6071d0d4d6af" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/getCellValue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/getCellValue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/receiptReportParser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/receiptReportParser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,10 +121,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.clean" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="npm.test" />
-        <item itemvalue="npm.build" />
+        <item itemvalue="npm.clean" />
         <item itemvalue="Jest.Constants file (1)" />
       </list>
     </recent_temporary>
@@ -146,6 +148,7 @@
       <workItem from="1741457650088" duration="206000" />
       <workItem from="1746622643386" duration="124000" />
       <workItem from="1746623612061" duration="1327000" />
+      <workItem from="1749683315590" duration="2298000" />
     </task>
     <task id="LOCAL-00001" summary="Change output file to receipts.csv">
       <created>1733933149231</created>
@@ -170,6 +173,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change output file to receipts.csv" />
     <MESSAGE value="Works directly with mounted Google Drive files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Works directly with mounted Google Drive files." />
+    <MESSAGE value="2.0.3 - Re-order, rename columns.  Add 'VR' column.  All to match Transactions and Vouchers sheet columns." />
+    <option name="LAST_COMMIT_MESSAGE" value="2.0.3 - Re-order, rename columns.  Add 'VR' column.  All to match Transactions and Vouchers sheet columns." />
   </component>
 </project>

@@ -76,6 +76,10 @@ export const processRow = (row, rowNumber, outputRows) => {
         outputRow.budgetLine = myRow.getBudgetLine(row);
         outputRow.amount = myRow.getCellValueAssured(row, Constants.CELL_NAMES.AMOUNT, rowNumber);
 
+        // Extract k-v pairs from description and interpolate them into the outputRow object.
+        const kvpairs = myRow.getKeyValuePairs(row);
+        Object.assign(outputRow, kvpairs);
+
         // Assume a split receipt's parts are consecutive in the input.  If the last output row bears the
         // same receipt number as the one currently being accumulated, mark both as split.
         if ((outputRows.length > 0) && (outputRows[outputRows.length - 1].receiptNum === outputRow.receiptNum)) {

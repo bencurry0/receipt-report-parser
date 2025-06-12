@@ -148,6 +148,36 @@ export const getBudgetLine = (row) => {
     return budgetLine;
 };
 
+/*
+ * Grab the description cell from the given row and parse it for key-value pairs.
+ * Return the k-v pairs as a map with keys converted to upper case.
+ * If the same key is used more than once in the given description cell, the last
+ * k-v pair with that key rules.
+ */
+export const getKeyValuePairs = (row) => {
+    const desc = getCellValue(row, Constants.CELL_NAMES.DESCRIPTION);
+    const regex = /\b(\w+)=(".*?"|\d+)\b/g;
+    const result = {};
+    let match;
+
+    while ((match = regex.exec(desc)) !== null) {
+        const key = match[1];
+        let value = match[2];
+
+        // Remove quotes if it's a quoted string
+        if (value.startsWith('"') && value.endsWith('"')) {
+            value = value.slice(1, -1);
+        } else {
+            // Convert numeric strings to actual numbers
+            value = Number(value);
+        }
+
+        result[key.toUpperCase()] = value;
+    }
+
+    return result;
+}
+
 export const isReportTotalRow = row => {
     return getCellValue(row, Constants.CELL_NAMES.REPORT_TOTAL) && true;
 };
