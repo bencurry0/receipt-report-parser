@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024.   curryfirm.com
+ * Copyright (c) 2024-2025.   curryfirm.com
  */
 
 import fs from 'fs';
@@ -46,9 +46,8 @@ async function readAndExtractData() {
     return outputRows;
 }
 
-// Function to write the extracted data to a CSV file
-async function writeToCSV(data) {
-    const myHeader = [
+async function buildHeaders(data) {
+    const fixedHeaders = [
         {id: 'vr', title: 'VR'},
         {id: 'batchDate', title: 'ProcessDate'},
         {id: 'receiptDate', title: 'VRDate'},
@@ -65,6 +64,39 @@ async function writeToCSV(data) {
         {id: 'split', title: 'Split'},
         {id: 'checkNum', title: 'CheckNumber'},
     ];
+
+    // Collect all discovered keys from k-v pairs in the description cells.
+    const discoveredKeys = new Set();
+    data.forEach(row => {
+        Object.keys(row).forEach(key => discoveredKeys.add(key));
+    });
+
+    // Remove keys already covered by fixedHeaders.
+    const fixedKeys = new Set(fixedHeaders.map(h => h.id));
+    const dynamicHeaders = Array.from(discoveredKeys)
+        .filter(key => !fixedKeys.has(key))
+        .map(key => ({id: key, title: key}));
+
+    // Combine fixed and dynamic headers.
+    return fixedHeaders.concat(dynamicHeaders);
+}
+
+async function normalize(data, header) {
+    const headerIds = header.map(h => h.id);
+    const cleanedRows = data.map(row => {
+        const cleaned = {};
+        headerIds.forEach(key => {
+            cleaned[key] = key in row ? row[key] : "";
+        });
+        return cleaned;
+    });
+    return cleanedRows;
+}
+
+// Function to write the extracted data to a CSV file
+async function writeToCSV(data) {
+    const myHeader = await buildHeaders(data);
+    const normalData = await normalize(data, myHeader);
     const csvWriter = createObjectCsvWriter({
         path: outputFilePath,
         header: myHeader
